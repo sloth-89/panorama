@@ -1,0 +1,71 @@
+@charset "utf-8";
+@import url("http://fonts.googleapis.com/css?family=Orbitron");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  outline: 0;
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+}
+
+body {
+  font: 17px/1.4 "orbitron";
+  letter-spacing: 1px;
+  color: #ddd;
+  background: #000;
+}
+
+/* main (배경) */
+.wrap {
+  /* 풀스크린 */
+  /* fixed 없이 width: 100vw; height: 100vh로 해도 된다. */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  /* 원근감 설정 */
+  perspective: 1300px;
+}
+
+/* 화면에 꽉 채우기 */
+.wrap video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+  opacity: 0.5;
+}
+
+/* section (카드 프레임) */
+.wrap #circle {
+  width: 600px;
+  height: 800px;
+  border: 1px solid aqua;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -400px;
+  margin-left: -300px;
+}
+
+/* article (카드) */
+.wrap #circle article {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
